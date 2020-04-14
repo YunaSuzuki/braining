@@ -21,9 +21,17 @@ var total_questions = document.getElementById('total-questions');
 //ランダム数値生成
 function create_random(){
 
-  var num1 = Math.ceil(Math.random() * 100);
-  var num2 = Math.ceil(Math.random() * 100);
   var symbol_num = Math.floor(Math.random() * 2);
+
+  if(symbol_num == 0){
+    //足し算
+    var num1 = Math.ceil(Math.random() * 100);
+    var num2 = Math.ceil(Math.random() * 100);
+  } else if(symbol_num == 1){
+    //引き算
+    var num1 = Math.ceil(Math.random() * 100);
+    var num2 = Math.ceil(Math.random() * num1);
+  }
 
   num1_box.innerText = num1
   symbol_box.innerText = symbol[symbol_num];
