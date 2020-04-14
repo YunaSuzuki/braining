@@ -37,9 +37,7 @@ function create_random(){
   symbol_box.innerText = symbol[symbol_num];
   num2_box.innerText = num2;
   var pc_answer = pc_calculate(num1, num2, symbol_num);
-
   input_answer.value = "";
-
   return pc_answer;
 }
 
@@ -67,7 +65,7 @@ function check_answer(pc_answer){
     judge_message.classList.remove('false');
   };
 
-  if (user_answer && pc_answer){
+  if ((user_answer != null) && (pc_answer != null)){
     h += 1;
     total_questions.innerText = h;
 

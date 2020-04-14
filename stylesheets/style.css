@@ -98,9 +98,11 @@ body {
   border-radius: 5px; }
 
 .correct {
-  color: red; }
+  color: red;
+  font-weight: bold; }
 
 .false {
-  color: blue; }
+  color: blue;
+  font-weight: bold; }
 
 /*# sourceMappingURL=style.css.map */
