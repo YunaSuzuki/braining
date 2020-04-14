@@ -1,0 +1,41 @@
+.large-letter{
+  @media #{$pc-size}{
+    @include fontsize(80);
+  }
+
+  @media #{$tb-size}{
+    @include fontsize(72);
+  }
+
+  @media #{$sp-size}{
+    @include fontsize(56);
+  }
+}
+
+.middle-letter{
+  @media #{$pc-size}{
+    @include fontsize(64);
+  }
+
+  @media #{$tb-size}{
+    @include fontsize(48);
+  }
+
+  @media #{$sp-size}{
+    @include fontsize(40);
+  }
+}
+
+.small-letter{
+  @media #{$pc-size}{
+    @include fontsize(40);
+  }
+
+  @media #{$tb-size}{
+    @include fontsize(32);
+  }
+
+  @media #{$sp-size}{
+    @include fontsize(24);
+  }
+}

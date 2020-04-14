@@ -1,0 +1,64 @@
+@import 'compass';
+@import 'modules/variables.scss';
+@import 'modules/mixin.scss';
+@import 'modules/common.scss';
+
+body{
+  background-color: #FFFCF2;
+}
+
+.wrapper{
+  @media #{$pc-size}{
+    margin: 64px auto 0;
+    width: 1024px;
+  }
+  @media #{$less_than_tb}{
+    margin: 32px auto 0;
+    width: 95%;
+  }
+}
+
+.calc-box__formula-wrapper{
+  display: flex;
+
+  .calc-box__formula{
+    display: flex;
+    width: 70%;
+
+    span{
+      display: block;
+      width: 25%;
+      text-align: center;
+    }
+  }
+
+  input#user_answer{
+    width: 30%;
+    display: inline-block;
+    @include fontsize(56);
+  }
+}
+
+.btn{
+  @media #{$pc-size}{
+    margin: 56px 0;
+  }
+
+  @media #{$less_than_tb}{
+    margin: 24px 0;
+  }
+}
+
+.change-numbur-btn{
+  padding: 16px 24px;
+  text-align: center;
+  background-color: #D9D9D9;
+  @include border-radius(5px);
+}
+
+.send-btn{
+  padding: 16px 24px;
+  text-align: center;
+  background-color: #FFBF69;
+  @include border-radius(5px);
+}
