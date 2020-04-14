@@ -12,7 +12,9 @@ var input_answer = document.getElementById('user_answer');
 var ok_btn = document.getElementById('send-btn');
 var judge_message = document.getElementById('judge-message');
 var i = 0;
-
+var h = 0;
+var how_many_answers = document.getElementById('how-many-answers');
+var total_questions = document.getElementById('total-questions');
 // __________________________________________関数定義↓↓
 
 
@@ -52,10 +54,13 @@ function check_answer(pc_answer){
   user_answer = document.getElementById('user_answer').value;
 
   if (user_answer && pc_answer){
+    h += 1;
+    total_questions.innerText = h;
 
     if(user_answer == pc_answer){
       i += 1;
-      judge_message.innerText = i + "問 正解です";
+      how_many_answers.innerText = i;
+      judge_message.innerText = "正解です";
 
       create_random();
     } else{

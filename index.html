@@ -14,7 +14,14 @@
     </header><!-- /header -->
     <main>
       <div class="calc-box">
-        <p class="small-letter">問正解中</p>
+        <p class="small-letter">
+          <span id="how-many-answers">0</span>
+          <span>問正解</span>
+          (
+          <span id="total-questions">0</span>
+          <span>問中</span>
+          )
+        </p>
         <p class="judge-message small-letter" id="judge-message">答えを入力してください。</p>
         <div class="calc-box__formula-wrapper">
           <div class="calc-box__formula">
@@ -23,7 +30,7 @@
             <span class="calc-box__num large-letter" id="num2-box"></span>
             <span class="large-letter">=</span>
           </div>
-          <input type="number" name="user_answer" id="user_answer">
+          <input type="text" name="user_answer" id="user_answer">
         </div>
         <div class="btn send-btn small-letter" id="send-btn">答え合わせをする</div>
         <div class="btn small-letter change-numbur-btn" id="button1">数字を変える</div>
