@@ -8,23 +8,30 @@
   <link rel="stylesheet" href="stylesheets/style.css">
 </head>
 <body>
-  <header id="header" class="header">
+  <div class="wrapper">
+    <header id="header" class="header">
 
-  </header><!-- /header -->
-  <main>
-    <div id="button1">スタート</div>
-    <div class="calc-box">
-      <span class="calc-box__num" id="num1-box"></span>
-      <span class="calc-box__symbol" id="symbol"></span>
-      <span class="calc-box__num" id="num2-box"></span>
-      <input type="number" name="user_answer" id="user_answer">
-      <span class="send-btn" id="send-btn">OK</span>
-      <p class="judge-message" id="judge-message"></p>
-    </div>
-  </main>
-  <footer id="footer" class="footer">
-
-  </footer>
+    </header><!-- /header -->
+    <main>
+      <div class="calc-box">
+        <p class="small-letter">問正解中</p>
+        <p class="judge-message small-letter" id="judge-message">答えを入力してください。</p>
+        <div class="calc-box__formula-wrapper">
+          <div class="calc-box__formula">
+            <span class="calc-box__num large-letter" id="num1-box"></span>
+            <span class="calc-box__symbol large-letter" id="symbol"></span>
+            <span class="calc-box__num large-letter" id="num2-box"></span>
+            <span class="large-letter">=</span>
+          </div>
+          <input type="number" name="user_answer" id="user_answer">
+        </div>
+        <div class="btn send-btn small-letter" id="send-btn">答え合わせをする</div>
+        <div class="btn small-letter change-numbur-btn" id="button1">数字を変える</div>
+      </div>
+    </main>
+    <footer id="footer" class="footer">
+    </footer>
+  </div>
   <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="js/main.js"></script> -->
 </body>
