@@ -62,3 +62,11 @@ body{
   background-color: #FFBF69;
   @include border-radius(5px);
 }
+
+.correct{
+  color: red;
+}
+
+.false{
+  color: blue;
+}

@@ -97,4 +97,10 @@ body {
   -webkit-border-radius: 5px;
   border-radius: 5px; }
 
+.correct {
+  color: red; }
+
+.false {
+  color: blue; }
+
 /*# sourceMappingURL=style.css.map */

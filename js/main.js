@@ -53,6 +53,12 @@ function pc_calculate(num1, num2, symbol_num){
 function check_answer(pc_answer){
   user_answer = document.getElementById('user_answer').value;
 
+  //文字カラーリセット
+  if((judge_message.classList.contains('correct')) || (judge_message.classList.contains('false'))){
+    judge_message.classList.remove('correct');
+    judge_message.classList.remove('false');
+  };
+
   if (user_answer && pc_answer){
     h += 1;
     total_questions.innerText = h;
@@ -60,13 +66,17 @@ function check_answer(pc_answer){
     if(user_answer == pc_answer){
       i += 1;
       how_many_answers.innerText = i;
-      judge_message.innerText = "正解です";
+      judge_message.classList.add('correct');
+      judge_message.innerText = "正解";
 
       create_random();
     } else{
       // console.log(pc_answer);
       // console.log(user_answer);
+      judge_message.classList.add('false');
       judge_message.innerText = "不正解";
+
+      create_random();
     }
   } else{
     judge_message.innerText = "値を入力してください";
