@@ -65,8 +65,7 @@ function pc_calculate(num1, num2, symbol_num){
 }
 
 //textboxに入力された数値を取得
-function check_answer(pc_answer){
-  user_answer = document.getElementById('user_answer').value;
+function check_answer(pc_answer, user_answer){
 
   //文字カラーリセット
   if((judge_message.classList.contains('correct')) || (judge_message.classList.contains('false'))){
@@ -74,7 +73,7 @@ function check_answer(pc_answer){
     judge_message.classList.remove('false');
   };
 
-  if ((user_answer != null) && (pc_answer != null)){
+  if ((user_answer != '') && (pc_answer != null)){
     h += 1;
     total_questions.innerText = h;
 
@@ -110,8 +109,8 @@ button1.addEventListener('click', function(){
 });
 
 ok_btn.addEventListener('click', function(){
-  // console.log(user_answer);
-  check_answer(pc_answer);
+  user_answer = document.getElementById('user_answer').value;
+  check_answer(pc_answer, user_answer);
   input_answer.value = "";
 });
 
