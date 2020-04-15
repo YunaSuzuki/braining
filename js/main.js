@@ -114,4 +114,20 @@ ok_btn.addEventListener('click', function(){
   input_answer.value = "";
 });
 
+//Enterキーで答えあわせ
+document.onkeydown = function(e) {
+    var keyCode = false;
+    if (e) event = e;
+    if (event) {
+        if (event.keyCode) {
+            keyCode = event.keyCode;
+        } else if (event.which) {
+            keyCode = event.which;
+        }
+    }
+    if(keyCode == 13){
+      user_answer = document.getElementById('user_answer').value;
+      check_answer(pc_answer, user_answer);
+    }
+};
 
