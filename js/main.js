@@ -33,6 +33,8 @@ function create_random(){
     var num2 = Math.ceil(Math.random() * num1);
   }
 
+  input_answer.focus();
+
   num1_box.innerText = num1
   symbol_box.innerText = symbol[symbol_num];
   num2_box.innerText = num2;
