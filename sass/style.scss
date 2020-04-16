@@ -24,6 +24,7 @@ body{
   .calc-box__formula{
     display: flex;
     width: 70%;
+    padding: 0 10%;
 
     span{
       display: block;
@@ -34,12 +35,14 @@ body{
 
   input#user_answer{
     width: 30%;
+    padding: 0 12px;
     display: inline-block;
     @include fontsize(56);
   }
 }
 
 .btn{
+  cursor: pointer;
   @media #{$pc-size}{
     margin: 56px 0;
   }

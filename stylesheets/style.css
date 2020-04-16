@@ -62,24 +62,28 @@ body {
   display: flex; }
   .calc-box__formula-wrapper .calc-box__formula {
     display: flex;
-    width: 70%; }
+    width: 70%;
+    padding: 0 10%; }
     .calc-box__formula-wrapper .calc-box__formula span {
       display: block;
       width: 25%;
       text-align: center; }
   .calc-box__formula-wrapper input#user_answer {
     width: 30%;
+    padding: 0 12px;
     display: inline-block;
     font-size: 56px;
     font-size: 3.5rem;
     font-size: 3.5em; }
 
-@media (min-width: 1025px) {
-  .btn {
-    margin: 56px 0; } }
-@media (max-width: 1024px) {
-  .btn {
-    margin: 24px 0; } }
+.btn {
+  cursor: pointer; }
+  @media (min-width: 1025px) {
+    .btn {
+      margin: 56px 0; } }
+  @media (max-width: 1024px) {
+    .btn {
+      margin: 24px 0; } }
 
 .change-numbur-btn {
   padding: 16px 24px;
