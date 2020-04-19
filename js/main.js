@@ -5,7 +5,7 @@ var button1 = document.getElementById('button1');
 var num1_box = document.getElementById('num1-box');
 var num2_box = document.getElementById('num2-box');
 var symbol_box = document.getElementById('symbol');
-var symbol = ['+', '-', '×'];
+var symbol = ['+', '-', '×', '÷'];
 var pc_answer;
 var user_answer;
 var input_answer = document.getElementById('user_answer');
@@ -21,7 +21,7 @@ var total_questions = document.getElementById('total-questions');
 //ランダム数値生成
 function create_random(){
 
-  var symbol_num = Math.floor(Math.random() * 3);
+  var symbol_num = Math.floor(Math.random() * 4);
 
   if(symbol_num == 0){
     //足し算
@@ -35,14 +35,27 @@ function create_random(){
     //引き算
     var num1 = Math.ceil(Math.random() * 100);
     var num2 = Math.ceil(Math.random() * 9);
+  } else if(symbol_num == 3){
+    //割り算(2~10)
+    var num1 = Math.round(Math.random() * 8) + 2;
+    var num2 = Math.round(Math.random() * 8) + 2;
   }
 
-  input_answer.focus();
+  //数字表示
+  if (symbol_num == 3){
+    //割り算の場合
+    num1_box.innerText = num1 * num2;
+    symbol_box.innerText = symbol[symbol_num];
+    num2_box.innerText = num2;
+  } else{
+    //割り算以外の場合
+    num1_box.innerText = num1
+    symbol_box.innerText = symbol[symbol_num];
+    num2_box.innerText = num2;
+  }
 
-  num1_box.innerText = num1
-  symbol_box.innerText = symbol[symbol_num];
-  num2_box.innerText = num2;
   var pc_answer = pc_calculate(num1, num2, symbol_num);
+  input_answer.focus();
   input_answer.value = "";
   return pc_answer;
 }
@@ -59,6 +72,9 @@ function pc_calculate(num1, num2, symbol_num){
       break;
     case 2:
       pc_answer = num1 * num2;
+      break;
+    case 3:
+      pc_answer = (num1 * num2) / num2;
       break;
   }
   return pc_answer;
